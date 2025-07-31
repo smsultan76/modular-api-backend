@@ -11,7 +11,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+        \Illuminate\Foundation\Auth\User::class,
+        \Modules\Auth\app\Models\User::class
+    );
     }
 
     /**

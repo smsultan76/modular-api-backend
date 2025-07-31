@@ -2,6 +2,7 @@
 
 return [
 
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -123,4 +124,36 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'providers' => [
+    // ...
+
+    Modules\Auth\app\Providers\AuthServiceProvider::class,
+    Illuminate\Filesystem\FilesystemServiceProvider::class,
+    Illuminate\View\ViewServiceProvider::class,  // Required for blade.compiler
+    Illuminate\Filesystem\FilesystemServiceProvider::class,
+    Nwidart\Modules\LaravelModulesServiceProvider::class,
+    Illuminate\Auth\AuthServiceProvider::class,
+    Illuminate\Session\SessionServiceProvider::class, // Required for auth
+    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+    Modules\Auth\app\Providers\RouteServiceProvider::class,
+    Modules\Auth\app\Providers\EventServiceProvider::class,
+    Illuminate\Cache\CacheServiceProvider::class,
+    Illuminate\Filesystem\FilesystemServiceProvider::class, // Required for cache
+    Illuminate\Translation\TranslationServiceProvider::class,  // Required for translator
+    Illuminate\Bus\BusServiceProvider::class,
+    Illuminate\Pagination\PaginationServiceProvider::class,
+    Illuminate\Notifications\NotificationServiceProvider::class,
+    Illuminate\Database\DatabaseServiceProvider::class,
+    Illuminate\Cookie\CookieServiceProvider::class,
+    Illuminate\Hashing\HashServiceProvider::class,
+    Illuminate\Log\LogServiceProvider::class,
+    Illuminate\Queue\QueueServiceProvider::class,
+    Illuminate\Routing\RoutingServiceProvider::class,
+    Illuminate\Validation\ValidationServiceProvider::class,
+    Illuminate\Events\EventServiceProvider::class,
+    Illuminate\Broadcasting\BroadcastServiceProvider::class,
+    Illuminate\Cookie\CookieServiceProvider::class,
+    Illuminate\Encryption\EncryptionServiceProvider::class,
+    Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+],
 ];
