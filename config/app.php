@@ -154,5 +154,6 @@ return [
     Illuminate\Cookie\CookieServiceProvider::class,
     Illuminate\Encryption\EncryptionServiceProvider::class,
     Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+    Illuminate\Foundation\Providers\FoundationServiceProvider::class,
 ],
 ];
