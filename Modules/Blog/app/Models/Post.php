@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Blog\Entities\Models;
+namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Auth\app\Models\User;
+use app\Models\User;
 
 class Post extends Model
 {
