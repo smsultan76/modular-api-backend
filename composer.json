@@ -25,7 +25,13 @@
     "autoload": {
     "psr-4": {
       "App\\": "app/",
-      "Modules\\": "Modules/"
+      "Modules\\": "Modules/",
+      "Modules\\auth\\": "Modules/Auth/app/",
+      "Modules\\Auth\\database\\seeders\\": "Modules/Auth/database/seeders",
+      "Modules\\Blog\\": "Modules/Blog/app/",
+      "Modules\\Blog\\database\\seeders\\": "Modules/Blog/database/seeders",
+      "Modules\\Profile\\": "Modules/Profile/app/",
+      "Modules\\Profile\\database\\seeders\\": "Modules/Profile/database/seeders"
     }
   },
     "autoload-dev": {

@@ -45,10 +45,8 @@ return [
                  */
                 'docs' => storage_path('api-docs'),
                 'annotations' => [
-                    base_path('app/Http'),
-                    base_path('app/Models'),
-                    base_path('app/Http/Controllers'), // Only scan controllers
-                    base_path('Modules/*/app/Http/Controllers'),
+                    base_path('app/Http/Controllers'),
+
 
                 ],
 
