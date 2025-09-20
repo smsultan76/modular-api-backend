@@ -16,10 +16,7 @@ class PostController extends Controller
      *     summary="Get all posts",
      *     @OA\Response(
      *         response=200,
-     *         description="List of posts",
-     *         @OA\JsonContent(
-     *             type="array",
-     *         )
+     *         description="List of posts"
      *     )
      * )
      */
