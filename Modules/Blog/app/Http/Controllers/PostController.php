@@ -4,7 +4,7 @@ namespace Modules\Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Modules\Blog\app\Models\Post;
+use Modules\Blog\Models\Post;
 use Modules\Auth\app\Models\User;
 
 class PostController extends Controller
