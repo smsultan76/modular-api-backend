@@ -45,7 +45,8 @@ return [
                  */
                 'docs' => storage_path('api-docs'),
                 'annotations' => [
-                    base_path('app/Http/Controllers'),
+                    base_path('app'),
+                    base_path('Modules/*/app'),
 
 
                 ],
