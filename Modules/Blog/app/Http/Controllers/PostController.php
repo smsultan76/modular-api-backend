@@ -19,7 +19,6 @@ class PostController extends Controller
      *         description="List of posts",
      *         @OA\JsonContent(
      *             type="array",
-     *             @OA\Items(ref="#/components/schemas/Post")
      *         )
      *     )
      * )
@@ -47,7 +46,6 @@ class PostController extends Controller
      *     @OA\Response(
      *         response=201,
      *         description="Post created successfully",
-     *         @OA\JsonContent(ref="#/components/schemas/Post")
      *     ),
      *     @OA\Response(
      *         response=401,
@@ -85,7 +83,6 @@ class PostController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Post data",
-     *         @OA\JsonContent(ref="#/components/schemas/Post")
      *     ),
      *     @OA\Response(
      *         response=404,
@@ -122,7 +119,6 @@ class PostController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Post updated successfully",
-     *         @OA\JsonContent(ref="#/components/schemas/Post")
      *     ),
      *     @OA\Response(
      *         response=401,

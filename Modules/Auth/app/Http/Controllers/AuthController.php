@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Facades\JWTAuth;
-use OpenApi\Annotations as OA;
 use Modules\Auth\App\Models\User;
 
 class AuthController extends Controller
@@ -132,8 +131,7 @@ class AuthController extends Controller
      *     security={{"bearerAuth":{}}},
      *     @OA\Response(
      *         response=200,
-     *         description="User data",
-     *         @OA\JsonContent(ref="#/components/schemas/User")
+     *         description="User data"
      *     ),
      *     @OA\Response(
      *         response=401,

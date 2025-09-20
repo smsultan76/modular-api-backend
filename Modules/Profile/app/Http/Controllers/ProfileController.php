@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Modules\Profile\app\Models\Profile;
 use Modules\Auth\app\Models\User;
-use OpenApi\Annotations as OA;
 class ProfileController extends Controller
 {
     /**
@@ -17,11 +16,7 @@ class ProfileController extends Controller
      *     security={{"bearerAuth":{}}},
      *     @OA\Response(
      *         response=200,
-     *         description="Profile data",
-     *         @OA\JsonContent(
-     *             @OA\Property(property="user", ref="#/components/schemas/User"),
-     *             @OA\Property(property="profile", ref="#/components/schemas/Profile"),
-     *         )
+     *         description="Profile data"
      *     ),
      *     @OA\Response(
      *         response=401,
@@ -57,11 +52,7 @@ class ProfileController extends Controller
      *     ),
      *     @OA\Response(
      *         response=200,
-     *         description="Profile updated successfully",
-     *         @OA\JsonContent(
-     *             @OA\Property(property="user", ref="#/components/schemas/User"),
-     *             @OA\Property(property="profile", ref="#/components/schemas/Profile"),
-     *         )
+     *         description="Profile updated successfully"
      *     ),
      *     @OA\Response(
      *         response=401,
