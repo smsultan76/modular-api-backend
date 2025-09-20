@@ -134,7 +134,6 @@ return [
     Nwidart\Modules\LaravelModulesServiceProvider::class,
     Illuminate\Auth\AuthServiceProvider::class,
     Illuminate\Session\SessionServiceProvider::class, // Required for auth
-    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     Modules\Auth\app\Providers\RouteServiceProvider::class,
     Modules\Auth\app\Providers\EventServiceProvider::class,
     Illuminate\Cache\CacheServiceProvider::class,
