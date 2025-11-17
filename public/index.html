@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Web Push Test</h2>
+<button id="subscribeBtn">Enable Notifications</button>
+
+<script>
+const VAPID_PUBLIC = "{{ YOUR_VAPID_PUBLIC_KEY }}"; // paste generated key
+
+// 1. Register service worker
+navigator.serviceWorker.register("/sw.js");
+
+// 2. Ask permission + subscribe
+document.getElementById("subscribeBtn").onclick = async () => {
+
+    let perm = await Notification.requestPermission();
+    if (perm !== "granted") return alert("Permission denied");
+
+    const reg = await navigator.serviceWorker.ready;
+
+    // Subscribe to push
+    const sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: VAPID_PUBLIC
+    });
+
+    // Send subscription to backend
+    await fetch("/api/save-subscription", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(sub)
+    });
+
+    alert("Subscribed!");
+};
+</script>
+</body>
+</html>
