@@ -10,6 +10,5 @@ Route::group(['prefix' => 'v1'], function () {
     // Route::group([], module_path('Blog', '/Routes/api.php'));
 });
 
-
 Route::post('/save-subscription', [PushNotificationController::class, 'save']);
 Route::post('/send-notification', [PushNotificationController::class, 'send']);
